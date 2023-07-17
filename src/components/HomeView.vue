@@ -1,7 +1,5 @@
 <template>
-  
-        
-        
+    
        <template v-if = "!showForm">
         <div class="container">
             <div class="top-container">
@@ -275,10 +273,9 @@ export default {
     }
 
     .practice-area-img {
-        width: 31%;  /* Adjust the width so that only 3 images fit in one row */
-        height: auto;
-        margin: 1%;  /* Adjust the margin to accommodate the new image size */
-    }
+  width: 100%;
+  height: auto;
+}
    
 
     .attorneys-container {
