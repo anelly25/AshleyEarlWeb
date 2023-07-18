@@ -250,22 +250,22 @@ export default {
         font-family: Arial, sans-serif; /* Choose your preferred font */
         font-size: 0.8em; /* Adjust this value to change the size of your text */
     }
-    .practice-areas-container {
-        background-color: #f2f2f2;
-        padding: 40px;  /* Increase padding */
-        margin-bottom: 20px;
-        border-radius: 5px;
-    }
-
     .images-container {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
-    .practice-area-img {
-  width: 100%;
-  height: auto;
+.practice-area-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.practice-areas-container {
+    background-color: #f2f2f2;
+    padding: 40px;  /* Increase padding */
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
    
 
@@ -288,7 +288,7 @@ export default {
     background-size: cover;
     background-position: center;
     height: 100vh;
-
+    min-height: 700px;
 }
 .credentials-img {
     width: 50%;  /* Adjust as necessary */
