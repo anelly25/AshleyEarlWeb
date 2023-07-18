@@ -379,7 +379,7 @@ export default {
     @media only screen and (max-width: 768px) {
         .top-container {
             height: 50vh;
-            width: 80%;
+            width: 100%;
             min-height: 350px;
         }
     }
