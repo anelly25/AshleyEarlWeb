@@ -333,6 +333,10 @@ export default {
     .practice-area-img {
         width: 100%;
     }
+    .top-container {
+            height: 50vh;
+            min-height: 350px;
+        }
 }
 
 
@@ -375,12 +379,7 @@ export default {
         min-height: 700px;
     }
 
-    @media only screen and (max-width: 768px) {
-        .top-container {
-            height: 50vh;
-            min-height: 400px;
-        }
-    }
+    
 .credentials-img {
     width: 50%;  /* Adjust as necessary */
     height: auto; /* This will maintain the aspect ratio of the image */
