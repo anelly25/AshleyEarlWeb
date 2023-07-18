@@ -1,7 +1,7 @@
 <template>   
      <div v-if = "show" >       
         <div class="language-notification">
-            <p>We speak Spanish, see below. | Hablamos español, vea abajo.</p>
+            <p>We speak Spanis, see below. | Hablamos español, vea abajo.</p>
         </div>
         <div class="top-container">               
         
