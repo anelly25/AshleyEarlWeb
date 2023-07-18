@@ -76,7 +76,7 @@ export default {
     },
     data() {
         return {
-            imagePath: require('../../dist/js/web.png'),
+            imagePath: require('../assets/web.png'),
             name: 'ImageOverlay',
             showForm: false,
             about: 'The Earl Law Firm is an esteemed legal practice recognized for proficiently addressing the needs of both businesses and individuals. Our comprehensive expertise extends to a wide range of legal matters, including personal injury, criminal defense, family law, and immigration law. We have a rich history of successfully advocating for our clients rights, navigating through complex legal landscapes, and delivering resolution for a myriad of claims. Our commitment to legal excellence is unwavering, and our resolve in championing for justice, unwearied.',
@@ -359,7 +359,7 @@ export default {
 }
     
 .top-container {
-    background-image: url('./assets/web.png');
+    background-image: url('../assets/web.png');
     background-size: cover;
     background-position: center;
     height: 70vh;
