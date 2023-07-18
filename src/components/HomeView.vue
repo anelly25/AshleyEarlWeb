@@ -1,12 +1,10 @@
-<template>    
-       <template v-if = "!showForm">
-        
-            <div class="top-container">
-                
-                
+<template>   
+     <div v-if = "show" >       
         <div class="language-notification">
             <p>We speak Spanish, see below. | Hablamos español, vea abajo.</p>
         </div>
+        <div class="top-container">               
+        
        </div>
        <div class="about-container">
     <h2 class="sub-heading">About Us</h2>
@@ -19,7 +17,6 @@
         </div>
     </div>
 </div>
-
         <div class="attorneys-container">
             <h2>Make Your Issue is Our Issue</h2>
             <p>{{ attorneys }}</p>
@@ -60,24 +57,29 @@
             <h2>{{ spanish }}</h2>
             <p><strong>Email en Español :</strong> {{ emailSpanish }}</p>
             <p><strong>Facebook Español :</strong> {{ facebookSpanish }}</p>
+        </div>  
         </div>
-       </template>
-        <ContactForm v-if="showForm" @exit="showForm=false" /> 
 </template>
 <script>
-import ContactForm from './ContactForm.vue'
+
 
 export default {
     name: 'HomeView',
     components: {
-        ContactForm
+        
+    },
+    props: {
+        show: {
+            type: Boolean,
+            required: true
+        }
     },
     data() {
         return {
             imagePath: require('../../dist/js/web.png'),
             name: 'ImageOverlay',
             showForm: false,
-            about: 'The Earl Law Firm is known for resolving issues for Businesses & Individuals including those involving Personal injury, Criminal defense, Family law and Immigration Law claims.',
+            about: 'The Earl Law Firm is an esteemed legal practice recognized for proficiently addressing the needs of both businesses and individuals. Our comprehensive expertise extends to a wide range of legal matters, including personal injury, criminal defense, family law, and immigration law. We have a rich history of successfully advocating for our clients rights, navigating through complex legal landscapes, and delivering resolution for a myriad of claims. Our commitment to legal excellence is unwavering, and our resolve in championing for justice, unwearied.',
             hours: '9:00 AM – 5:00 PM Monday - Friday',
             address: '9422 Common St. Suite 1. Baton Rouge, LA 70809',
             phone: '(225)761-9456',
