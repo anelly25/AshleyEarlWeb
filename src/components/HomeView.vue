@@ -368,12 +368,19 @@ export default {
 }
     
 .top-container {
-    background-image: url('../assets/web.png');
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
-    min-height: 700px;
-}
+        background-image: url('../assets/web.png');
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+        min-height: 700px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .top-container {
+            height: 50vh;
+            min-height: 400px;
+        }
+    }
 .credentials-img {
     width: 50%;  /* Adjust as necessary */
     height: auto; /* This will maintain the aspect ratio of the image */
