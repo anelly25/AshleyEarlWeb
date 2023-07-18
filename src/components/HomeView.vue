@@ -1,5 +1,4 @@
-<template>
-    
+<template>    
        <template v-if = "!showForm">
         <div class="container">
             <div class="top-container">
@@ -28,8 +27,7 @@
             <img src="https://www.kryderlaw.com/wp-content/uploads/2023/01/Carpentersville-Personal-Injury-Lawyer.jpg" alt="Descriptive text">
         </div>
     </div>
-</div>
-        
+</div>        
         <div class="attorneys-container">
             <h2>Make Your Issue is Our Issue</h2>
             <p>{{ attorneys }}</p>
@@ -65,14 +63,9 @@
             <p><strong>Email en Español :</strong> {{ emailSpanish }}</p>
             <p><strong>Facebook Español :</strong> {{ facebookSpanish }}</p>
         </div>
-       
-
        </template>
-
-        <ContactForm v-if="showForm" @exit="showForm=false" />
-   
+        <ContactForm v-if="showForm" @exit="showForm=false" /> 
 </template>
-
 <script>
 import ContactForm from './ContactForm.vue'
 
@@ -133,9 +126,7 @@ export default {
         color: #fff;
         background-size: cover;
     }
-
-
-    
+   
     .logo {
         width: 180px;
         height: auto;
@@ -292,11 +283,12 @@ export default {
     max-width: 700px; 
     margin: 0 auto
 }
-    .top-container {
+.top-container {
     background-image: url('https://www.travellens.co/content/images/2022/04/Baton-Rouge.jpg');
     background-size: cover;
-    background-position: left center;
-    height: 700px;
+    background-position: center;
+    height: 100vh;
+
 }
 .credentials-img {
     width: 50%;  /* Adjust as necessary */
