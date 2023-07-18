@@ -251,7 +251,7 @@ export default {
     }
     .language-notification {
         position: absolute;
-        top: 50px; /* Adjust this value according to the height of your navigation bar */
+        top: 51px; /* Adjust this value according to the height of your navigation bar */
         right: 0;
         padding: 10px;
         background-color: #ffcc00; /* Yellow color for better visibility */
