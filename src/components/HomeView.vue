@@ -359,7 +359,7 @@ export default {
 }
     
 .top-container {
-    background-image: url('../../dist/js/web.png');
+    background-image: url('./assets/web.png');
     background-size: cover;
     background-position: center;
     height: 70vh;
