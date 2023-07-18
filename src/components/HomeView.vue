@@ -370,9 +370,9 @@ export default {
     
 .top-container {
         background-image: url('../assets/web.png');
-        background-size: contain;
+        background-size: 100% auto;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center center;
         height: 70vh;
         min-height: 700px;
     }
@@ -382,7 +382,6 @@ export default {
             height: auto;
             width: 100%;
             min-height: 350px;
-            background-size: cover;
         }
     }
 .credentials-img {
