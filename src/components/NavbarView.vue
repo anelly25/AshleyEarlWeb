@@ -2,7 +2,8 @@
     <nav class="navbar">
       <div class="navbar-content">
         <h1>Ashley Earl Law Firm</h1>
-        <p>Call: 2257619456</p>
+        <p>Call: <a class="phone-link" :href="'tel:+12257619456'">(225)761-9456</a></p>
+       
       </div>
     </nav>
   </template>
@@ -43,4 +44,15 @@
   .navbar-content p {
     margin: 0;
   }
+
+  .navbar-content .phone-link {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.navbar-content .phone-link:hover,
+.navbar-content .phone-link:focus {
+    color: white !important;
+    text-decoration: underline !important;
+}
   </style>
