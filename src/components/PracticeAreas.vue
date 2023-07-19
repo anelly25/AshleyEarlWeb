@@ -57,7 +57,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: navy;
+  background-color: #001f3f;
   padding: 20px;
   padding-bottom: 100px; /* add padding bottom to ensure some visible background under the boxes */
   min-height: 100vh; /* Ensure full height of the viewport is used */
