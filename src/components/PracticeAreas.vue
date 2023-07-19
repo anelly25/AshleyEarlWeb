@@ -51,34 +51,52 @@
   };
   </script>
   
+  
   <style scoped>
+.practice-areas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: navy;
+  padding: 20px;
+  padding-bottom: 100px; /* add padding bottom to ensure some visible background under the boxes */
+  min-height: 100vh; /* Ensure full height of the viewport is used */
+}
+
+.area {
+  flex: 1 0 300px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  max-width: 800px;
+}
+
+.area-image {
+  width: 100%;
+  height: auto;
+}
+
+.area-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.area-description {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
   .practice-areas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .area {
-    width: 300px;
-    margin: 20px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: 100%;
+    max-width: 100%;
   }
-  
-  .area-image {
-    width: 100%;
-    height: auto;
-  }
-  
-  .area-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-  }
-  
-  .area-description {
-    font-size: 16px;
-    margin-top: 10px;
-  }
-  </style>
-  
+}
+</style>

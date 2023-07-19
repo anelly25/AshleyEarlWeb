@@ -1,23 +1,22 @@
 <template>
   <div class="contact-form">
-    <button @click="$emit('exit')">Exit</button>
     <h2>Contact Form</h2>
     <form @submit.prevent="sendEmail" ref="form">
       <label for="from_name">Your Name</label>
       <input type="text" id="from_name" v-model="from_name" name="from_name">
-
+      <input type="text" id="to_name" v-model="to_name" name="to_name">
       <label for="email">Your Email</label>
       <input v-model="userEmail" type="email" placeholder="Your email" name="user_email">
-
       <label for="message">Your Message</label>
       <textarea id="message" v-model="message" name="message"></textarea>
-
-      <div>  
-        <button type="submit">Send Email</button>
+      <p class="disclaimer-text">By submitting this form, you are agreeing to receive promotional email and text communications from the Ashly Earl Law Firm.</p>
+      <div class="button-container">  
+        <button type="submit" class="save-button">Send Email</button>
       </div>
     </form>
   </div>
 </template>
+
 
 <script>
 import emailjs from 'emailjs-com';
@@ -50,6 +49,11 @@ export default {
 </script>
 
 <style scoped>
+.disclaimer-text {
+  font-size: 12px; /* Smaller font size for the disclaimer text */
+  margin-bottom: 20px; /* Space between the disclaimer text and the button */
+}
+
 .contact-form {
   padding: 20px;
   max-width: 600px;
@@ -75,5 +79,26 @@ export default {
 .contact-form textarea {
   height: 150px;
   resize: vertical;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Align the button to the center */
+}
+
+.save-button {
+  background-color: green;
+  color: white;
+  padding: 10px 15px; 
+  font-size: 16px; 
+  border-radius: 5px; /* Make it rectangular */
+  width: 100%; /* Make it long */
+  max-width: 300px; /* Control the maximum width */
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: darkgreen;
 }
 </style>

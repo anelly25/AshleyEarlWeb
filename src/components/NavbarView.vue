@@ -17,9 +17,9 @@
       </div>
     </div>
     <div class="content-container">
-      <HomeView :show="showHomeComponent" />
+      <HomeView v-if="showHomeComponent" @showPracticeAreas = "showPracticeArea"/>
       <ContactForm v-if="showContactComponent" />
-      <PracticeAreas v-if="showPracticeAreaComponent" />
+      <PracticeAreas v-if="showPracticeAreaComponent"  />
     </div>
   </nav>
 </template>
@@ -47,6 +47,11 @@ export default {
   methods: {
     toggleDropdown() {
       this.showDropdown = !this.showDropdown;
+      if (this.showDropdown) {
+      this.showHomeComponent = false;
+    } else {
+      this.showHomeComponent = true;
+    }
     },
     showHome() {
       this.showHomeComponent = true;
@@ -59,6 +64,7 @@ export default {
       this.showPracticeAreaComponent = false;
     },
     showPracticeArea() {
+      console.log("uuu");
       this.showHomeComponent = false;
       this.showContactComponent = false;
       this.showPracticeAreaComponent = true;

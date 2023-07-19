@@ -1,24 +1,19 @@
 <template>
   <div id="app">
     <NavbarView />
-
-    <HomeView/>
   </div>
 </template>
  
 
 <script>
 
-import HomeView from './components/HomeView.vue'
+
 import NavbarView from './components/NavbarView.vue'
 
 export default {
   name: 'App',
   components: {
     NavbarView,
-    HomeView,
-
-
   }
 }
 </script>

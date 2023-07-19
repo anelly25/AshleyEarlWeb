@@ -1,28 +1,30 @@
-<template>   
-     <div v-if = "show" >       
-        
-        <div class="top-container">               
-        
-       </div>
-       <div class="about-container">
-    <h2 class="sub-heading">About Us</h2>
-    <div class="about-content">
-        <div class="text-section">
-            <p class="large-text">{{ about }}</p>
-        </div>
-        <div class="image-section">
-            <img src="https://www.kryderlaw.com/wp-content/uploads/2023/01/Carpentersville-Personal-Injury-Lawyer.jpg" alt="Descriptive text">
-        </div>
-    </div>
-</div>
-        <div class="attorneys-container">
+<template>       
+        <div class="top-container">                      
+       </div>     
+        <div
+         class="attorneys-container">
             <h2>Make Your Issue is Our Issue</h2>
             <p>{{ attorneys }}</p>
     </div>
-    <div class="about-container">
-    <h2 class="sub-heading">About Us</h2>
+    <div class="practice-areas-container">
+    <h2 class="sub-heading">Practice Areas</h2>
+    <div class="images-container">
+        <div class="top-row">
+            <img class="practice-area-img" src="https://www.attorneygeneral.gov/wp-content/uploads/2020/03/CR_immigration_LG.jpg" alt="Practice Area 1" @click="navigateToPracticeAreas">
+            <img class="practice-area-img" src="https://edwardslawofficepc.com/wp-content/uploads/2019/05/criminal-law-plaque-ontable-with-gavel.jpg" alt="Practice Area 2" @click="navigateToPracticeAreas">
+            <img class="practice-area-img" src="https://swartzlaw.com/wp-content/uploads/2021/12/Personal-Injury-Law-Firm-1.jpg" alt="Practice Area 3" @click="navigateToPracticeAreas">
+        </div>
+        <div class="bottom-row">
+            <img class="practice-area-img" src="https://www.broadviewsolicitorsllp.com/wp-content/uploads/2023/01/Business-Law-BVSLLP.jpg" alt="Practice Area 4" @click="navigateToPracticeAreas">
+            <img class="practice-area-img" src="https://divorcebroward.com/wp-content/uploads/2019/08/common-law.jpg" alt="Practice Area 5" @click="navigateToPracticeAreas">
+        </div>
+    </div>
+</div>
+
+<div class="about-container">
     <div class="about-content">
         <div class="text-section">
+            <h2 class="sub-heading">About Us</h2>
             <p class="large-text">{{ about }}</p>
         </div>
         <div class="image-section">
@@ -53,25 +55,25 @@
             <h2>{{ spanish }}</h2>
             <p><strong>Email en Español :</strong> {{ emailSpanish }}</p>
             <p><strong>Facebook Español :</strong> {{ facebookSpanish }}</p>
-        </div>  
-        </div>
+        </div>   
 </template>
 <script>
-
-
+ 
+ 
 export default {
     name: 'HomeView',
-    components: {
-        
-    },
+    
     props: {
         show: {
             type: Boolean,
             required: true
         }
     },
+  
     data() {
         return {
+        
+           
             imagePath: require('../assets/web.png'),
             name: 'ImageOverlay',
             showForm: false,
@@ -91,6 +93,9 @@ export default {
             }
         }
     },
+    mounted(){
+     this.currentShow = this.show;
+    },
     methods: {
         handleFormSubmit(data) {
             // send data to server
@@ -102,7 +107,15 @@ export default {
                 },
                 body: JSON.stringify(data)
             });
-        }
+        
+        
+        },
+        navigateToPracticeAreas() {
+            this.$emit('showPracticeAreas');
+            console.log("blah");
+            
+            console.log(this.show);
+  },
     },
 }
 </script>
@@ -256,6 +269,12 @@ export default {
     width: 45%;
 }
 
+.text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items vertically in the text-section */
+}
+
 .image-section img {
     width: 100%;
     height: 100%;
@@ -275,6 +294,7 @@ export default {
         width: 100%;
     }
 }
+
     .spanish-section {
         border: 2px solid #1a3d50;
         border-radius: 5px;
@@ -304,77 +324,107 @@ export default {
     
 
     .images-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid navy;
-}
-
-.top-row, .bottom-row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.practice-area-img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    margin: 5px;
-    transition: filter 0.3s ease;
-}
-
-.practice-area-img:hover {
-    filter: brightness(50%);
-    cursor: pointer;
-}
-
-@media screen and (max-width: 600px) {
-    .practice-area-img {
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid navy;
     }
-    
-}
+
+    .top-row,
+    .bottom-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .practice-area-img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        margin: 5px;
+        transition: filter 0.3s ease;
+        border: none; /* Remove the default border */
+    }
+
+    .practice-area-img:hover {
+        filter: brightness(50%);
+        cursor: pointer;
+        border: 2px solid green; /* Add the green border on hover */
+    }
+
+    @media screen and (max-width: 600px) {
+        .practice-area-img {
+            width: 100%;
+        }
+    }
 
 
 .attorneys-container {
-    background-color: #1a3d50; /* Navy color from your page */
-    color: #fff; /* White color for the text */
-    padding: 20px;
-    font-size: 2em;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
+        background-color: #001f3f;  /* Dark navy color */
+        color: #fff; /* White color for the text */
+        padding: 20px;
+        font-size: 2em;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
 
-.attorneys-container h2 {
-    position: relative;
-    padding-bottom: 10px;
-}
+    .attorneys-container h2 {
+        position: relative;
+        padding-bottom: 10px;
+        color: #fff; /* White color for the heading */
+    }
 
-.attorneys-container h2::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
-}
+    .attorneys-container h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
+    }
 
-.attorneys-container p {
-    color: #fff;/* Navy color from your page */
-    font-size: 24px; /* Increase size as per requirement */
-    max-width: 700px; 
-    margin: 0 auto
-}
+    .attorneys-container p {
+        color: #fff; /* White color for the text */
+        font-size: 24px; /* Increase size as per requirement */
+        max-width: 700px;
+        margin: 0 auto;
+    }
     
-.top-container {
+    .top-container {
+        position: relative;
         background-image: url('../assets/web.png');
-        background-size: 100% auto;
+        background-size: contain;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: center;
+        opacity: 0.7; /* Adjust the opacity as desired */
         height: 70vh;
         min-height: 700px;
+    }
+
+    .top-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('https://www.travellens.co/content/images/2022/04/Baton-Rouge.jpg');
+        background-size: cover;
+        background-position: center;
+        filter: blur(10px); /* Apply the blur effect */
+        opacity: 0.7; /* Adjust the opacity as desired */
+        z-index: -1; /* Place the blurred image behind the content */
+    }
+
+    .top-container img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%; /* Adjust the width as desired */
+        filter: none; /* Remove the blur effect on the centered image */
+        z-index: 1; /* Place the centered image in front of the blurred image */
     }
 
     @media only screen and (max-width: 768px) {
@@ -382,8 +432,10 @@ export default {
             height: auto;
             width: 100%;
             min-height: 350px;
+            background-size: cover, cover;
         }
     }
+
 .credentials-img {
     width: 50%;  /* Adjust as necessary */
     height: auto; /* This will maintain the aspect ratio of the image */
@@ -401,3 +453,9 @@ export default {
 
 
 </style>
+
+
+
+
+
+
