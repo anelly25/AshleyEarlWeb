@@ -56,8 +56,8 @@ export default {
 
 .contact-form {
   padding: 20px;
-  max-width: 600px;
-  margin: 80px auto;
+  max-width: 700px;
+  margin: 20px auto;
   background-color: #f9f9f9;
   border-radius: 4px;
 }
@@ -69,7 +69,7 @@ export default {
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ddd;

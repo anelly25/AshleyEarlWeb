@@ -2,20 +2,16 @@
   <nav class="navbar">
     <div class="navbar-content">
       <h1>Ashley Earl Law Firm</h1>
-      <p>Call: <a class="phone-link" :href="'tel:+12257619456'">(225)761-9456</a></p>
-      <div class="menu-container">
-        <button class="dropdown-toggle" @click="toggleDropdown">
-          <span class="dropdown-line"></span>
-          <span class="dropdown-line"></span>
-          <span class="dropdown-line"></span>
-        </button>
-        <div class="navbar-links" v-if="showDropdown">
-          <button class="nav-link" @click="showHome">Home</button>
-          <button class="nav-link" @click="showContact">Contact</button>
-          <button class="nav-link" @click="showPracticeArea">Practice Area</button>
-        </div>
+
+      <div class="tab-container">
+        <button class="tab-link" :class="{'active-tab': showHomeComponent}" @click="showHome">Home</button>
+        <button class="tab-link" :class="{'active-tab': showContactComponent}" @click="showContact">Contact</button>
+        <button class="tab-link" :class="{'active-tab': showPracticeAreaComponent}" @click="showPracticeArea">Practice Area</button>
       </div>
+
+      <p>Call: <a class="phone-link" :href="'tel:+12257619456'">(225)761-9456</a></p>
     </div>
+
     <div class="content-container">
       <HomeView v-if="showHomeComponent" @showPracticeAreas = "showPracticeArea"/>
       <ContactForm v-if="showContactComponent" />
@@ -38,21 +34,12 @@ export default {
   },
   data() {
     return {
-      showDropdown: false,
       showHomeComponent: true,
       showContactComponent: false,
       showPracticeAreaComponent: false,
     };
   },
   methods: {
-    toggleDropdown() {
-      this.showDropdown = !this.showDropdown;
-      if (this.showDropdown) {
-      this.showHomeComponent = false;
-    } else {
-      this.showHomeComponent = true;
-    }
-    },
     showHome() {
       this.showHomeComponent = true;
       this.showContactComponent = false;
@@ -64,7 +51,6 @@ export default {
       this.showPracticeAreaComponent = false;
     },
     showPracticeArea() {
-      console.log("uuu");
       this.showHomeComponent = false;
       this.showContactComponent = false;
       this.showPracticeAreaComponent = true;
@@ -75,8 +61,18 @@ export default {
 
 <style scoped>
 .content-container {
-  height: 100vh; /* Adjust as needed */
+  height: 100vh;
   overflow-y: auto;
+}
+
+.navbar-content h1 {
+  font-size: 2em; 
+  margin: 0;
+}
+
+.navbar-content .phone-link {
+  color: #001f3f !important;
+  text-decoration: none !important;
 }
 
 .navbar {
@@ -85,69 +81,65 @@ export default {
   left: 0;
   width: 100%;
   height: 100px; 
-  background-color: #333;
+  background-color: #fff;
   z-index: 9999;
+  border-bottom: 1px solid black;
 }
 
 .navbar-content {
-  max-width: 800px;
-  margin: 0 auto;
+  position: relative;
+  width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around; /* Changed from 'space-between' to 'space-around' */
   align-items: center;
-  padding: 0 20px;
-  color: #fff;
+  color: #333;
 }
 
-.navbar-content h1 {
-  font-size: 2em; 
-  margin: 0;
+.tab-container {
+  display: flex;
+  justify-content: center;
+  order: 2;
+}
+
+.tab-link {
+  display: inline-block; /* Make the tabs inline elements */
+  position: relative; /* Set relative positioning for the tabs */
+  padding: 20px 30px; /* Adjust padding for finer control over tab spacing */
+  margin: 0 10px; /* Add space between tabs */
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.tab-link::after { /* This will be the line under the tab */
+  content: "";
+  position: absolute; /* Absolute positioning related to the tab */
+  bottom: 0; /* Position the line at the bottom of the tab */
+  left: 0; /* Start the line from the left edge of the tab */
+  height: 4px; /* Adjust the thickness of the line */
+  width: 100%; /* Set the width of the line to be the same as the tab content */
+  box-sizing: content-box; /* Include padding in the element's total width and height */
+  background: lightgray;
+}
+
+.tab-link:hover {
+  color: #001f3f;
+}
+
+.active-tab {
+  color: #001f3f;
+  font-weight: bold;
+}
+
+.active-tab::after { /* The line under the active tab */
+  background: navy;
 }
 
 .navbar-content p {
-  margin: 0;
-  font-size: 1.5em; 
-}
-
-.navbar-content .phone-link {
-  color: white !important;
-  text-decoration: none !important;
-}
-
-.menu-container {
-  position: relative;
-}
-
-.dropdown-toggle {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown-line {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 4px 0;
-  display: block;
-}
-
-.navbar-links {
-  position: absolute;
-  background-color: #333;
-  padding: 10px;
-  right: 0;
-  top: 40px; /* Adjust this value as needed */
-}
-
-.navbar-links .nav-link {
-  color: #fff;
-  display: block;
-  padding: 5px 0;
-}
-
-.navbar-content .active {
-  font-weight: bold;
+  order: 3;
 }
 </style>
