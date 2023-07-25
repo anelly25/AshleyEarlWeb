@@ -181,69 +181,58 @@ export default {
 
 <style scoped>
 
-    .info {
-        background-color:#001f3f ;  /* Navy blue color */
-        color: #fff;  /* You may want to change the text color to white for better contrast */
-        padding: 60px;
-        margin-bottom: 60px;
-        border-radius: 5px;
-        font-family: 'Arial', sans-serif;
-    }
-
-   
-    .sub-heading {
-        color: #1a3d50;
-        font-size: 2em;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    p {
-        line-height: 1.6;
-    }
-
-    .contact-button {
-        background-color: #1a3d50;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .credentials {
-    margin-top: 0;
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden; /* Hide the lines outside of the div */
-    font-family: 'Arial', sans-serif;
-}
-
-  .sub-heading {
-    color: #001f3f;
-    font-family: 'Arial', sans-serif;
-  }
-
-  .about-container {
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin-bottom: 0px; /* Reduce the bottom margin */
+.info {
+    background-color:#001f3f;
+    color: #fff;
+    padding: 5vw;
+    margin-bottom: 5vw;
     border-radius: 5px;
     font-family: 'Arial', sans-serif;
 }
 
 .sub-heading {
-    color: #001f3f;
+    color: #1a3d50;
+    font-size: 2vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.contact-button {
+    background-color: #1a3d50;
+    color: #fff;
+    border: none;
+    padding: 1vw 2vw;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.credentials {
+    margin-top: 0;
+    background-color: #f2f2f2;
+    padding: 2vw;
+    margin-bottom: 2vw;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.about-container {
+    background-color: #f2f2f2;
+    padding: 2vw;
+    margin-bottom: 0;
+    border-radius: 5px;
     font-family: 'Arial', sans-serif;
 }
 
 .about-content {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 2vw;
     position: relative;
     font-family: 'Arial', sans-serif;
 }
@@ -254,10 +243,13 @@ export default {
     left: 50%;
     top: 0;
     bottom: 0;
-    width: 3px;
+    width: 0.3vw;
     background-color: #001f3f;
     font-family: 'Arial', sans-serif;
 }
+
+/* rest of your styles adapted in a similar fashion */
+
 
 .text-section, .image-section {
     padding: 20px;
@@ -297,48 +289,48 @@ export default {
         font-family: 'Arial', sans-serif;
     }
     .attorneys-container {
-    background-color: #001f3f;  /* Dark navy color */
+    background-color: #001f3f; /* Dark navy color */
     color: #fff; /* White color for the text */
-    padding: 20px;
-    font-size: 2em;
-    margin-top: 0px; /* Reduce the top margin */
-    margin-bottom: 20px;
-    border-radius: 5px;
+    padding: 1.25em; /* 20px assuming base font size is 16px */
+    font-size: 1em;
+    margin-top: 0; /* Reduce the top margin */
+    margin-bottom: 1.25em; /* 20px assuming base font size is 16px */
+    border-radius: 0.3125em; /* 5px assuming base font size is 16px */
     font-family: 'Arial', sans-serif;
-    }
+}
 
-    .attorneys-container h2 {
-        position: relative;
-        padding-bottom: 10px;
-        color: #fff; /* White color for the heading */
-        font-family: 'Arial', sans-serif;
-    }
+.attorneys-container h2 {
+    position: relative;
+    padding-bottom: 1.5em; /* 10px assuming base font size is 16px */
+    color: #fff; /* White color for the heading */
+    font-family: 'Arial', sans-serif;
+}
 
-    .attorneys-container h2::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 2px;
-        width: 100%;
-        background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
-        font-family: 'Arial', sans-serif;
-    }
+.attorneys-container h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: .2em; /* 2px assuming base font size is 16px */
+    width: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
+    font-family: 'Arial', sans-serif;
+}
 
-    .attorneys-container p {
-        color: #fff; /* White color for the text */
-        font-size: 24px; /* Increase size as per requirement */
-        max-width: 700px;
-        margin: 0 auto;
-        font-family: 'Arial', sans-serif;
-    }
-    
+.attorneys-container p {
+    color: #fff; /* White color for the text */
+    font-size: 1.5em; /* 24px assuming base font size is 16px */
+    max-width: 43.75em; /* 700px assuming base font size is 16px */
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+}
+
    
 
 .top-container {
     position: relative;
-    height: 70vh;
-    min-height: 700px;
+    height: 70vh; /* This is already a relative unit */
+    min-height: 43.75em; /* 700px assuming base font size is 16px */
     font-family: 'Arial', sans-serif;
 }
 
@@ -346,59 +338,57 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%; /* This is already a relative unit */
+    height: 100%; /* This is already a relative unit */
     font-family: 'Arial', sans-serif;
 }
 
 .top-image {
     background-image: url('../assets/web.png');
-    background-size: contain;
+    background-size: contain; /* This is relative to its container */
     background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.8;
-    z-index: 2;
+    background-position: center; /* This is relative to its container */
+    opacity: 0.8; /* This is already a relative unit */
+    z-index: 2; /* z-index doesn't have a relative unit equivalent, it's unitless */
 }
 
 .bottom-image {
     background-image: url('https://www.travellens.co/content/images/2022/04/Baton-Rouge.jpg');
-    background-size: cover;
-    background-position: 20% center;
-    filter: url(#blur);
-  
-  
+    background-size: cover; /* This is relative to its container */
+    background-position: 20% center; /* This is already a relative unit */
+    filter: url(#blur); /* Filters don't have a relative unit equivalent */
 }
 
 
 .contact-button {
     position: absolute;
-    bottom: 20px;
+    bottom: 1.25em; /* 20px */
     left: 50%; /* to center the button */
     transform: translateX(-50%); /* to perfectly center the button */
-    padding: 10px 20px;
-    background-color: #ffcc00; 
-    color: #333; 
+    padding: 0.625em 1.25em; /* 10px 20px */
+    background-color: #ffcc00;
+    color: #333;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 0.3125em; /* 5px */
+    font-size: 1em; /* 16px */
     cursor: pointer;
     transition: background-color 0.3s ease;
-    z-index: 10; 
+    z-index: 10;
 }
 
 .contact-button:hover {
     background-color: #e6b800;
 }
- 
+
 .rectangle-container {
     width: 100vw; /* This will make the rectangle the width of the viewport */
     background-color: #333; /* This sets the background color to black */
-    padding: 10px;
+    padding: 0.625em; /* 10px */
     box-sizing: border-box; /* This ensures that padding and border are included in the element's total width and height */
     display: flex;
     justify-content: center; /* This centers the title horizontally */
     align-items: center; /* This centers the title vertically */
-    height: 100px; /* You can adjust the height as needed */
+    height: 6.25em; /* 100px */
     font-family: 'Arial', sans-serif;
 }
 
@@ -409,86 +399,81 @@ export default {
 }
 
 
+
 .tabs {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly; /* This rule distributes all children equally along the row */
-    flex-wrap: wrap; /* This rule allows the tabs to wrap into multiple lines if necessary */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     font-family: 'Arial', sans-serif;
 }
-
-
 
 .tab:not(.active):hover {
     font-family: 'Arial', sans-serif;
     color: #1a3d50;
 }
 
-
 .tab {
-      cursor: pointer;
-      padding: 10px 15px;
-      color: #000;
-      text-decoration: none;
-      transition: color 0.3s;
-      font-family: 'Arial', sans-serif;
-  }
+    cursor: pointer;
+    padding: 0.625em 0.9375em; /* 10px 15px */
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-family: 'Arial', sans-serif;
+}
 
-  .tab:hover {
-      color: #777;
-      font-family: 'Arial', sans-serif;
-  }
+.tab:hover {
+    color: #777;
+    font-family: 'Arial', sans-serif;
+}
 
-  .active-tab {
-      border-bottom: 3px solid #001f3f;
-      font-family: 'Arial', sans-serif;
-  }
+.active-tab {
+    border-bottom: 0.1875em solid #001f3f; /* 3px */
+    font-family: 'Arial', sans-serif;
+}
 
-
-
-  .tab-content {
+.tab-content {
     display: flex;
     justify-content: space-between;
-    width: 100vw; /* Make it as wide as the screen */
-    max-width: 100%; /* Ensure it does not exceed its parent container */
-    border-radius: 5px;
-    margin-top: 20px;
+    width: 100vw;
+    max-width: 100%;
+    border-radius: 0.3125em; /* 5px */
+    margin-top: 1.25em; /* 20px */
     font-family: 'Arial', sans-serif;
 }
 
 .tab-image {
-    width: 45%; /* Make the image fill up 75% of the left half of the page */
-    height: auto;
-    object-fit: cover; /* This will ensure that your image maintains its aspect ratio */
-    border-radius: 5px;
-    margin-right: 18px;
+    width: 35%; /* Decreased from 45% */
+    height: 75%;
+    object-fit: cover;
+    border-radius: 0.3125em; /* 5px */
+    margin-right: 1.125em; /* 18px */
 }
 
 .tab-description {
-    width: 50%; /* Balance out the remaining width */
-    padding: 20px;
+    width: 50%; /* Increased from 50% */
+    padding: 2em; /* 20px */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 20px;
+    font-size: .7em; /* Decreased from 1.25em */
     font-family: 'Arial', sans-serif;
 }
 
-
-
 .tabs-container {
-    background-color: #f2f2f2;  /* Light Silver color */
-    color: #001f3f; /* Dark navy color for the text */
-    padding: 20px;
-    font-size: 2em;
-    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: #001f3f;
+    padding: 1em; /* 20px */
+    font-size: 1.25em;
+    border-radius: 0.3125em; /* 5px */
     font-family: 'Arial', sans-serif;
 }
 
 .practice-areas-title h2 {
     font-size: 2em;
     color: #001f3f;
-    margin-top: 20px;
+    margin-top: 1.25em; /* 20px */
     font-family: 'Arial', sans-serif;
 }
+
 </style>
