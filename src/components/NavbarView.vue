@@ -143,7 +143,10 @@ export default {
 }
 @media screen and (max-width: 480px) {
   .navbar-content h1 {
-    font-size: 1.5em; /* adjust size for small screens */
+    font-size: 1.2em; /* adjust size for small screens */
+  }
+  .phone-link {
+    font-size: .5em;
   }
   
   .navbar {
