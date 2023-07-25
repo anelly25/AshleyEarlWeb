@@ -58,7 +58,6 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 .content-container {
   height: 100vh;
@@ -66,7 +65,7 @@ export default {
 }
 
 .navbar-content h1 {
-  font-size: 2em;
+  font-size: 2em; 
   margin: 0;
 }
 
@@ -80,10 +79,10 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 6.25rem; /* 100px */
+  height: 8rem; /* use rem instead of px for better responsiveness */
   background-color: #fff;
   z-index: 9999;
-  border-bottom: 0.0625rem solid black; /* 1px */
+  border-bottom: 1px solid black;
 }
 
 .navbar-content {
@@ -105,8 +104,8 @@ export default {
 .tab-link {
   display: inline-block; /* Make the tabs inline elements */
   position: relative; /* Set relative positioning for the tabs */
-  padding: 1.25rem 1.875rem; /* 20px 30px */
-  margin: 0 0.625rem; /* 0 10px */
+  padding: 1rem 2rem; /* Adjust padding for finer control over tab spacing */
+  margin: 0 1rem; /* Add space between tabs */
   border: none;
   background: none;
   cursor: pointer;
@@ -120,7 +119,7 @@ export default {
   position: absolute; /* Absolute positioning related to the tab */
   bottom: 0; /* Position the line at the bottom of the tab */
   left: 0; /* Start the line from the left edge of the tab */
-  height: 0.25rem; /* 4px */
+  height: 4px; /* Adjust the thickness of the line */
   width: 100%; /* Set the width of the line to be the same as the tab content */
   box-sizing: content-box; /* Include padding in the element's total width and height */
   background: lightgray;
@@ -143,3 +142,4 @@ export default {
   order: 3;
 }
 </style>
+
