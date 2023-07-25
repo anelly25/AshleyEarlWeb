@@ -281,20 +281,6 @@ export default {
 }
 
 /* Responsive design */
-@media (max-width: 600px) {
-    .about-content {
-        flex-direction: column;
-        font-family: 'Arial', sans-serif;
-    }
-    .about-content::after {
-        content: none;
-        font-family: 'Arial', sans-serif;
-    }
-    .text-section, .image-section {
-        width: 100%;
-        font-family: 'Arial', sans-serif;
-    }
-}
 
     .spanish-section {
         background-color:  #001f3f;
@@ -381,16 +367,6 @@ export default {
     filter: url(#blur);
   
   
-}
-
-@media only screen and (max-width: 768px) {
-    .top-container {
-        height: auto;
-        width: 100%;
-        min-height: 350px;
-        background-size: cover, cover;
-        font-family: 'Arial', sans-serif;
-    }
 }
 
 
