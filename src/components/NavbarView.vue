@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="navbar-content">
-      <h1>Ashley Earl Law Firm</h1>
+      <h1>Earl Law Firm</h1>
 
       <div class="tab-container">
         <button class="tab-link" :class="{'active-tab': showHomeComponent}" @click="showHome">Home</button>
@@ -140,6 +140,29 @@ export default {
 
 .navbar-content p {
   order: 3;
+}
+@media screen and (max-width: 480px) {
+  .navbar-content h1 {
+    font-size: 1.5em; /* adjust size for small screens */
+  }
+  
+  .navbar {
+    height: 5rem; /* adjust height for small screens */
+  }
+
+  .tab-link {
+    padding: 0.5rem 1rem; /* adjust padding for small screens */
+    margin: 0 0.3rem; /* adjust margin for small screens */
+    font-size: 0.7em; /* adjust font size for small screens */
+  }
+
+  .tab-link::after { /* This will be the line under the tab */
+    height: 2px; /* adjust the thickness of the line for small screens */
+  }
+  
+  .navbar-content p {
+    font-size: 0.8em; /* adjust font size for small screens */
+  }
 }
 </style>
 
