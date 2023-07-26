@@ -167,7 +167,7 @@ export default {
     font-size: 0.8em; /* adjust font size for small screens */
   }
   .content-container{
-    height:100%;
+    height:200vh;
   }
 }
 </style>
