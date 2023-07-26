@@ -49,7 +49,7 @@
         </div>
     </div>
 <div class="credentials">
-    <h2 class="sub-heading">Ashly Van Earl</h2>
+    <h2 class="sub-heading">Ashly Van arl</h2>
    
     <h2 class="sub-heading">Credentials</h2>
     <p class="large-text">{{ ashly.desc }}</p>
@@ -186,7 +186,6 @@ export default {
     color: #fff;
     padding: 5vw;
     margin-bottom: 5vw;
-    border-radius: 5px;
     font-family: 'Arial', sans-serif;
 }
 
@@ -295,7 +294,6 @@ p {
     font-size: 1em;
     margin-top: 0; /* Reduce the top margin */
     margin-bottom: 1.25em; /* 20px assuming base font size is 16px */
-    border-radius: 0.3125em; /* 5px assuming base font size is 16px */
     font-family: 'Arial', sans-serif;
 }
 
@@ -446,8 +444,8 @@ p {
     width: 40%; /* Relative to the width of the parent element */
     height: 75%; /* Relative to the height of the parent element */
     object-fit: cover;
-   margin-top: 1em;
-    margin-right: 1.125em; /* Relative to the font-size of the element */
+    margin-top: 1em;
+    margin-left: 1.5em;
     border: 0.125em solid gold; /* Add this line for gold border */
 }
 
@@ -483,12 +481,13 @@ p {
 }
 @media screen and (max-width: 480px) {
     .top-container {
-        height: 50vh;
+        height: 40vh;
         min-height: 20em;
     }
 
     .top-image{
-        background-size: 80%;
+      
+        width:100%;
     }
     .bottom-image {
         background-size: cover;
@@ -516,6 +515,107 @@ p {
     .text-section {
         text-align: center;
     }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab:not(.active):hover {
+        font-size: 0.8em; /* Decrease the font-size */
+    }
+
+    .tab {
+        padding: 0.2em 0.3em; /* Decrease the padding */
+        font-size: 1em; /* Decrease the font size */
+        margin-left: 4em;
+    }
+
+    .active-tab {
+        border-bottom: 0.05em solid #001f3f; /* Decrease the border thickness */
+    }
+
+    .tab-content {
+        flex-direction: column; /* Change flex direction */
+        margin-top: 0.5em; /* Decrease the top margin */
+        height: 40vh; /* Adjust to fit within tabs-container's max-height */
+    }
+
+    .tab-image {
+        width: 100%; /* Image takes full width */
+        height: 40%; /* Adjust to fit within tab-content's height */
+      /* No need for right margin in smaller screens */
+        border: 0.05em solid gold; /* Decrease the border thickness */
+    }
+
+    .tab-description {
+        width: 100%; /* Description takes full width */
+        font-size: 1em; /* Decrease the font size */
+    }
+
+    .tabs-container {
+        background-color: #f2f2f2;
+        color: #001f3f;
+        padding: 0.3em; /* Decreased from 0.5em */
+        font-size: 0.8em; /* Decreased from 1em */
+        font-family: 'Arial', sans-serif;
+        border-top: 0.05em solid rgb(14, 10, 95);
+        border-bottom: 0.05em solid rgb(35, 21, 118);
+        max-width: 90%; /* The container will take only 90% of the width of its parent element */
+        margin: auto; /* To center the container */
+        max-height: 100vh; /* Adjust as per your needs */
+        overflow: auto; /* If the content overflows, a scrollbar will appear */
+        margin-left: 1em;
+    }
+
+
+    .practice-areas-title h2 {
+        font-size: 1.5em; /* Decrease the font size */
+        margin-top: 0.625em; /* Decrease the top margin */
+    }
+
+    .attorneys-container {
+    padding: 1.25em; /* 20px assuming base font size is 16px */
+    font-size: 1em;
+    margin-top: 0; /* Reduce the top margin */
+    margin-bottom: 1.25em; /* 20px assuming base font size is 16px */
+    border-radius: 0.3125em; /* 5px assuming base font size is 16px */
+ 
+}
+
+.attorneys-container h2 {
+    padding-bottom: 1.5em; /* 10px assuming base font size is 16px */ 
+}
+
+.attorneys-container h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: .2em; /* 2px assuming base font size is 16px */
+    width: 100%;
+}
+
+.attorneys-container p {  
+    font-size: 1em; /* 24px assuming base font size is 16px */
+    max-width: 43.75em; /* 700px assuming base font size is 16px */
+    margin: 0 auto;;
+}
+
+.info {
+    padding: 12vw;
+    margin-bottom: 15vw;
+    font-family: 'Arial', sans-serif;
+    font-size:.7em;
+}
+
+.sub-heading { 
+    font-size: 5vw;  
+}
+
+.credentials {
+   font-size:.75em;
+}
+
 }
 
 </style>
