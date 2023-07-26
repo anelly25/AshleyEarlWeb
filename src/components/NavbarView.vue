@@ -166,6 +166,9 @@ export default {
   .navbar-content p {
     font-size: 0.8em; /* adjust font size for small screens */
   }
+  .content-container{
+    height:100%;
+  }
 }
 </style>
 
