@@ -80,7 +80,7 @@ export default {
   left: 0;
   width: 100%;
   height: 8rem; /* use rem instead of px for better responsiveness */
-  background-color: #fff;
+  background-color: #f6b101;
   z-index: 9999;
   border-bottom: 1px solid black;
 }
@@ -122,7 +122,7 @@ export default {
   height: 4px; /* Adjust the thickness of the line */
   width: 100%; /* Set the width of the line to be the same as the tab content */
   box-sizing: content-box; /* Include padding in the element's total width and height */
-  background: lightgray;
+  background: rgba(255, 254, 254, 0.991);
 }
 
 .tab-link:hover {

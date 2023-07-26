@@ -313,7 +313,7 @@ p {
     left: 0;
     height: .2em; /* 2px assuming base font size is 16px */
     width: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f9d403, rgba(255, 255, 255, 0));
     font-family: 'Arial', sans-serif;
 }
 
@@ -329,7 +329,7 @@ p {
 
 .top-container {
     position: relative;
-    height: 70vh; /* This is already a relative unit */
+    height: 50vh; /* This is already a relative unit */
     min-height: 43.75em; /* 700px assuming base font size is 16px */
     font-family: 'Arial', sans-serif;
 }
@@ -370,7 +370,7 @@ p {
     color: #333;
     border: none;
     border-radius: 0.3125em; /* 5px */
-    font-size: 1em; /* 16px */
+    font-size: 1.5em; /* 16px */
     cursor: pointer;
     transition: background-color 0.3s ease;
     z-index: 10;
@@ -443,12 +443,14 @@ p {
 }
 
 .tab-image {
-    width: 35%; /* Decreased from 45% */
-    height: 75%;
+    width: 40%; /* Relative to the width of the parent element */
+    height: 75%; /* Relative to the height of the parent element */
     object-fit: cover;
-    border-radius: 0.3125em; /* 5px */
-    margin-right: 1.125em; /* 18px */
+   margin-top: 1em;
+    margin-right: 1.125em; /* Relative to the font-size of the element */
+    border: 0.125em solid gold; /* Add this line for gold border */
 }
+
 
 .tab-description {
     width: 50%; /* Increased from 50% */
@@ -456,24 +458,64 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: .7em; /* Decreased from 1.25em */
+    font-size: .9em; /* Decreased from 1.25em */
     font-family: 'Arial', sans-serif;
 }
 
 .tabs-container {
     background-color: #f2f2f2;
     color: #001f3f;
-    padding: 1em; /* 20px */
-    font-size: 1.25em;
-    border-radius: 0.3125em; /* 5px */
+    padding: 1em; /* Relative to the font-size of the element (1em = 100%) */
+    font-size: 1.25em; /* Relative to the parent element's font size */
+    /* Relative to the border box of the element, max(5% of width, 5% of height) */
     font-family: 'Arial', sans-serif;
+    border-top: 0.125em solid rgb(14, 10, 95); /* 0.125em is relative to the font-size of the element */
+    border-bottom: 0.125em solid rgb(35, 21, 118); /* Add this line for gold border */
 }
+
+
 
 .practice-areas-title h2 {
     font-size: 2em;
     color: #001f3f;
     margin-top: 1.25em; /* 20px */
     font-family: 'Arial', sans-serif;
+}
+@media screen and (max-width: 480px) {
+    .top-container {
+        height: 50vh;
+        min-height: 20em;
+    }
+
+    .top-image{
+        background-size: 80%;
+    }
+    .bottom-image {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .contact-button {
+        bottom: 0.625em;  /* reduce button position for smaller screens */
+        padding: 0.3em 0.6em;  /* reduce button padding for smaller screens */
+        font-size: 0.8em;  /* reduce button font size for smaller screens */
+    }
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content::after {
+        content: none;
+    }
+
+    .text-section, .image-section {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .text-section {
+        text-align: center;
+    }
 }
 
 </style>
