@@ -150,7 +150,7 @@ export default {
   }
   
   .navbar {
-    height: 5rem; /* adjust height for small screens */
+    height: 100vm; /* adjust height for small screens */
   }
 
   .tab-link {
@@ -167,7 +167,7 @@ export default {
     font-size: 0.8em; /* adjust font size for small screens */
   }
   .content-container{
-    height:200vh;
+    height:100vh;
   }
 }
 </style>
