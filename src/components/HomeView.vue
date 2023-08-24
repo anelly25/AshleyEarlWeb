@@ -56,7 +56,7 @@
     
 </div>
         <h2 class="sub-heading">Client Reviews</h2>
-        <img src="https://lh4.googleusercontent.com/GqX0masriPRiAoXB7g4V61J7MtJMMlIOteKfT6N_0-Hjn6pjuPYdEgL44eThOzQs8nrgZmjVIa6RVSYrflJhI4D4h38n0AMsW-UzlEyGJQQiWEcADdxxfll7r7JtuOBGhA=w1280" class="CENy8b" role="img">
+        <img src="'../assets/web.png'" class="CENy8b" role="img">
 
     <div class="info">
             <p><strong>Office Hours :</strong> {{ hours }}</p>
@@ -93,11 +93,11 @@ export default {
         return {
              selectedTabIndex: 0,
              tabs: [
-    { 
-        name: 'Common Law', 
-        src: 'https://divorcebroward.com/wp-content/uploads/2019/08/common-law.jpg', 
-        description: "Common law is a body of unwritten laws based on precedents established by the courts. It's the foundation for many legal systems worldwide, offering broad coverage of various legal matters. These legal principles evolve with society, allowing laws to adapt to changing circumstances. The principles of common law serve as a guide for judges and provide a framework for decision-making in court cases."
-    },
+             { 
+    name: 'Contract Law', 
+    src: 'https://divorcebroward.com/wp-content/uploads/2019/08/common-law.jpg', 
+    description: "Contract law pertains to the creation and enforcement of agreements between parties. It provides a legal framework that ensures promises made in contracts are honored, setting out the rights and obligations of each party. This body of law governs various aspects like validity, enforceability, and breach of contracts. The central aim is to ensure fairness and predictability in commercial and everyday transactions, ensuring that all parties fulfill their respective promises."
+},
     { 
         name: 'Criminal Law', 
         src: 'https://edwardslawofficepc.com/wp-content/uploads/2019/05/criminal-law-plaque-ontable-with-gavel.jpg', 
@@ -123,6 +123,7 @@ export default {
            title:"Speak With Us Now",
            showHomeVieww:false,
             imagePath: require('../assets/web.png'),
+            imagePath2: require('../assetes/Testimonials.png'),
             name: 'ImageOverlay',
             showForm: false,
             about: 'The Earl Law Firm is an esteemed legal practice recognized for proficiently addressing the needs of both businesses and individuals. Our comprehensive expertise extends to a wide range of legal matters, including personal injury, criminal defense, family law, and immigration law. We have a rich history of successfully advocating for our clients rights, navigating through complex legal landscapes, and delivering resolution for a myriad of claims. Our commitment to legal excellence is unwavering, and our resolve in championing for justice, unwearied.',

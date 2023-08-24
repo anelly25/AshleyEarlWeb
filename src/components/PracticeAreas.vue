@@ -40,11 +40,11 @@
     description2: 'Our goal is to provide practical legal solutions that support our clients’ business objectives. We offer strategic advice and representation in both transactional matters and litigation, helping businesses navigate the complexities of the legal landscape.',
   },
   {
-    title: 'Common Law',
-    image: 'https://divorcebroward.com/wp-content/uploads/2019/08/common-law.jpg',
-    description1: 'Our common law practice covers a wide range of legal areas that impact individuals and businesses. This includes property law, contract law, tort law, and more. We aim to provide comprehensive legal advice and representation to protect our clients’ rights and interests.',
-    description2: 'Our firm values strong client relationships, professionalism, and ethical practice. We are committed to understanding our clients’ needs and providing legal solutions that are both efficient and effective.',
-  },
+  title: 'Contract Law',
+  image: 'https://divorcebroward.com/wp-content/uploads/2019/08/common-law.jpg',
+  description1: "Our contract law practice focuses on the drafting, negotiation, and enforcement of contracts in a variety of sectors. From business agreements to personal contracts, our team ensures that our clients' interests are protected and their obligations clearly defined.",
+  description2: "We believe in the importance of a well-drafted contract as the foundation of any successful transaction or business relationship. Whether it's resolving contractual disputes or advising on complex contractual provisions, our attorneys bring a wealth of experience and insight to every contract-related challenge.",
+},
 ],
       };
     },
