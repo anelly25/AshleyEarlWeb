@@ -41,7 +41,7 @@
   },
   {
   title: 'Contract Law',
-  image: 'https://divorcebroward.com/wp-content/uploads/2019/08/common-law.jpg',
+  image: 'https://media.istockphoto.com/id/1130476273/photo/signing-the-agreement-in-the-contract.jpg?s=612x612&w=0&k=20&c=NlA-eL5ELryzYJCG4HMRgliVG78gdYgw1bYyI_y9UdE=',
   description1: "Our contract law practice focuses on the drafting, negotiation, and enforcement of contracts in a variety of sectors. From business agreements to personal contracts, our team ensures that our clients' interests are protected and their obligations clearly defined.",
   description2: "We believe in the importance of a well-drafted contract as the foundation of any successful transaction or business relationship. Whether it's resolving contractual disputes or advising on complex contractual provisions, our attorneys bring a wealth of experience and insight to every contract-related challenge.",
 },
