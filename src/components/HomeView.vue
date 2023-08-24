@@ -340,7 +340,7 @@ p {
 }
 
 .top-image {
-    background-image: url('../assets/web.png');
+    background-image: url('../assets/FullLogo.jpg');
     background-size: contain; /* This is relative to its container */
     background-repeat: no-repeat;
     background-position: center; /* This is relative to its container */
