@@ -93,7 +93,7 @@ export default {
              tabs: [
              { 
     name: 'Contract Law', 
-    src: 'https://divorcebroward.com/wp-content/uploads/2019/08/common-law.jpg', 
+    src: 'https://media.istockphoto.com/id/1130476273/photo/signing-the-agreement-in-the-contract.jpg?s=612x612&w=0&k=20&c=NlA-eL5ELryzYJCG4HMRgliVG78gdYgw1bYyI_y9UdE=', 
     description: "Contract law pertains to the creation and enforcement of agreements between parties. It provides a legal framework that ensures promises made in contracts are honored, setting out the rights and obligations of each party. This body of law governs various aspects like validity, enforceability, and breach of contracts. The central aim is to ensure fairness and predictability in commercial and everyday transactions, ensuring that all parties fulfill their respective promises."
 },
     { 
