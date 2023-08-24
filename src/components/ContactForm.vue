@@ -4,9 +4,8 @@
     <form @submit.prevent="sendEmail" ref="form">
       <label for="from_name">Your Name</label>
       <input type="text" id="from_name" v-model="from_name" name="from_name">
-      <input type="text" id="to_name" v-model="to_name" name="to_name">
       <label for="email">Your Email</label>
-      <input v-model="userEmail" type="email" placeholder="Your email" name="user_email">
+      <input v-model="userEmail" type="email" placeholder="Your email" name="email">
       <label for="message">Your Message</label>
       <textarea id="message" v-model="message" name="message"></textarea>
       <p class="disclaimer-text">By submitting this form, you are agreeing to receive promotional email and text communications from the Ashly Earl Law Firm.</p>
