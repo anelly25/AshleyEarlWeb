@@ -14,7 +14,7 @@
 
     <div class="content-container">
       <HomeView v-if="showHomeComponent" @showPracticeAreas = "showPracticeArea"/>
-      <ContactForm v-if="showContactComponent" />
+      <ContactForm v-if="showContactComponent" @emailSent="showHome" />
       <PracticeAreas v-if="showPracticeAreaComponent"  />
     </div>
   </nav>

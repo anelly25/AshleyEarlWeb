@@ -10,7 +10,7 @@
       <textarea id="message" v-model="message" name="message"></textarea>
       <p class="disclaimer-text">By submitting this form, you are agreeing to receive promotional email and text communications from the Ashly Earl Law Firm.</p>
       <div class="button-container">  
-        <button type="submit" class="save-button">Send Email</button>
+        <button type="submit" class="save-button">Send</button>
       </div>
     </form>
   </div>
@@ -38,6 +38,7 @@ export default {
       emailjs.sendForm('service_j63dlsp', 'template_4yijbnc', this.$refs.form)
     .then((result) => {
       console.log('SUCCESS!', result.status, result.text);
+      this.$emit('emailSent'); 
     })
     .catch((error) => {
       console.error('Error while sending the email:', error);
