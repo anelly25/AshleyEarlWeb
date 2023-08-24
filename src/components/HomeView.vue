@@ -50,7 +50,7 @@
     </div>
 <div class="credentials">
     <h2 class="sub-heading">Ashly Van arl</h2>
-   
+    <img :src="ashlyImage" alt="Ashly Van Earl's Photo" class="ashly-image">
     <h2 class="sub-heading">Credentials</h2>
     <p class="large-text">{{ ashly.desc }}</p>
     
@@ -65,9 +65,7 @@
             <div class="spanish-section">
             <h2>{{ spanish }}</h2>
             </div>
-            <p><strong>Email en Español :</strong> {{ emailSpanish }}</p>        
-            <p><strong>Facebook Español :</strong> <a :href="facebookSpanish" target="_blank">{{ facebookSpanish }}</a></p>
-           
+            <p><strong>Email en Español :</strong> {{ emailSpanish }}</p>               
         </div>
         
 </template>
@@ -89,6 +87,7 @@ export default {
   
     data() {
         return {
+            ashlyImage: require('../assets/ashly_van_earl.jpg'),
              selectedTabIndex: 0,
              tabs: [
              { 
@@ -131,7 +130,6 @@ export default {
             emailSpanish: 'marycruz@earllawfirm.com',
             spanish: 'Se Habla Español',
             facebook: 'https://www.facebook.com/EARLLAWFIRM',
-facebookSpanish: 'https://Facebook.com/ABOGADOASHLYEARL',
             attorneys: 'Unlike large law firms, where you may never meet or talk to the primary attorney working on your case, at The Earl Law Firm you can count on personal one on one attention from our attorneys. This is because as a small firm, quality relationships with our clients is important in keeping the company running smoothly.',
             ashly: {
                 name: 'Ashly Van Earl',
