@@ -130,8 +130,8 @@ export default {
             email: 'ashly@earllawfirm.com',
             emailSpanish: 'marycruz@earllawfirm.com',
             spanish: 'Se Habla Español',
-            facebook: 'Facebook.com/EARLLAWFIRM',
-            facebookSpanish: 'Facebook.com/ABOGADOASHLYEARL',
+            facebook: 'https://Facebook.com/EARLLAWFIRM',
+facebookSpanish: 'https://Facebook.com/ABOGADOASHLYEARL',
             attorneys: 'Unlike large law firms, where you may never meet or talk to the primary attorney working on your case, at The Earl Law Firm you can count on personal one on one attention from our attorneys. This is because as a small firm, quality relationships with our clients is important in keeping the company running smoothly.',
             ashly: {
                 name: 'Ashly Van Earl',
