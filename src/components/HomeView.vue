@@ -121,7 +121,6 @@ export default {
            title:"Speak With Us Now",
            showHomeVieww:false,
             imagePath: require('../assets/web.png'),
-            imagePath2: require('../assetes/Testimonials.png'),
             name: 'ImageOverlay',
             showForm: false,
             about: 'The Earl Law Firm is an esteemed legal practice recognized for proficiently addressing the needs of both businesses and individuals. Our comprehensive expertise extends to a wide range of legal matters, including personal injury, criminal defense, family law, and immigration law. We have a rich history of successfully advocating for our clients rights, navigating through complex legal landscapes, and delivering resolution for a myriad of claims. Our commitment to legal excellence is unwavering, and our resolve in championing for justice, unwearied.',
