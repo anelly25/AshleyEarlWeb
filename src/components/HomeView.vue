@@ -24,7 +24,7 @@
 </div>
         <div
          class="attorneys-container">
-            <h2>Make Your Issue is Our Issue</h2>
+            <h2>Make Your Issue Our Issue</h2>
             <p>{{ attorneys }}</p>
     </div>
     <div class="practice-areas-title">
