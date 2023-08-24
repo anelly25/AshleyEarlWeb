@@ -13,6 +13,8 @@
         <button type="submit" class="save-button">Send</button>
       </div>
     </form>
+    <p v-if="formSubmitted" class="success-text">Contact Form has been submitted successfully.</p>
+  
   </div>
 </template>
 
@@ -28,6 +30,7 @@ export default {
       to_name: 'Earl Law Firm',
       userEmail: '',
       message: '',
+      formSubmitted: false ,
     }
   },
   mounted() {
@@ -38,6 +41,7 @@ export default {
       emailjs.sendForm('service_j63dlsp', 'template_4yijbnc', this.$refs.form)
     .then((result) => {
       console.log('SUCCESS!', result.status, result.text);
+      this.formSubmitted = true; 
       this.$emit('emailSent'); 
     })
     .catch((error) => {
@@ -97,7 +101,12 @@ export default {
   transition: all 0.2s;
   cursor: pointer;
 }
-
+.success-text {
+  font-size: 14px;
+  color: green;
+  text-align: center;
+  margin-top: 20px;
+}
 .save-button:hover {
   background-color: darkgreen;
 }
