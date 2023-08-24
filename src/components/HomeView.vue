@@ -61,12 +61,12 @@
             <p><strong>Address :</strong> {{ address }}</p>
             <p><strong>Phone :</strong> {{ phone }}</p>
             <p><strong>Email :</strong> {{ email }}</p>
-            <p><strong>Facebook :</strong> {{ facebook }}</p>
+            <p><strong>Facebook :</strong> <a :href="facebook" target="_blank">{{ facebook }}</a></p>
             <div class="spanish-section">
             <h2>{{ spanish }}</h2>
             </div>
             <p><strong>Email en Español :</strong> {{ emailSpanish }}</p>        
-            <p><strong>Facebook Español :</strong> {{ facebookSpanish }}</p>
+            <p><strong>Facebook Español :</strong> <a :href="facebookSpanish" target="_blank">{{ facebookSpanish }}</a></p>
            
         </div>
         
