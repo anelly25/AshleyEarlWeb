@@ -55,8 +55,6 @@
     <p class="large-text">{{ ashly.desc }}</p>
     
 </div>
-        <h2 class="sub-heading">Client Reviews</h2>
-        <img src="../assetes/Testimonials.png" class="CENy8b" role="img">
 
     <div class="info">
             <p><strong>Office Hours :</strong> {{ hours }}</p>
