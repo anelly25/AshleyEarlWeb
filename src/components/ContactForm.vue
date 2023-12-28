@@ -64,6 +64,7 @@ export default {
   margin: 20px auto;
   background-color: #f9f9f9;
   border-radius: 4px;
+  min-height: 100vh;
 }
 
 .contact-form label {

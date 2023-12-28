@@ -598,10 +598,11 @@ p {
 }
 
 .info {
-    padding: 12vw;
-    margin-bottom: 15vw;
+    padding: 10vw;
+    margin-bottom: 20vw;
     font-family: 'Arial', sans-serif;
     font-size:.7em;
+    min-height: 47vh;
 }
 
 .sub-heading { 
