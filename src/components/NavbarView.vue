@@ -4,10 +4,12 @@
       <h1>Earl Law Firm</h1>
 
       <div class="tab-container">
-        <button class="tab-link" :class="{'active-tab': showHomeComponent}" @click="showHome">Home</button>
-        <button class="tab-link" :class="{'active-tab': showContactComponent}" @click="showContact">Contact</button>
-        <button class="tab-link" :class="{'active-tab': showPracticeAreaComponent}" @click="showPracticeArea">Practice Area</button>
-      </div>
+  <button class="tab-link" :class="{'active-tab': showHomeComponent}" @click="showHome">Home</button>
+  <button class="tab-link" :class="{'active-tab': showContactComponent}" @click="showContact">Contact</button>
+  <button class="tab-link" :class="{'active-tab': showPracticeAreaComponent}" @click="showPracticeArea">Practice Area</button>
+  <button class="tab-link" :class="{'active-tab': showPrivacyNoticeComponent}" @click="showPrivacyNotice">Privacy Notice</button>
+</div>
+
 
       <p>Call: <a class="phone-link" :href="'tel:+12257619456'">(225)761-9456</a></p>
     </div>
@@ -16,6 +18,48 @@
       <HomeView v-if="showHomeComponent" @showPracticeAreas = "showPracticeArea"/>
       <ContactForm v-if="showContactComponent" @emailSent="showHome" />
       <PracticeAreas v-if="showPracticeAreaComponent"  />
+      <div v-if="showPrivacyNoticeComponent">
+        <h2>Privacy Notice</h2>
+        <p>Welcome to Earl Law Firm! We are committed to protecting your privacy and ensuring that your personal data is handled responsibly. This privacy notice explains how we collect, use, and protect your information. Please read it carefully.</p>
+        <h3>Data Controller</h3>
+        <ul>
+          <li>Organization Name: Earl Law Firm</li>
+          <li>Contact Details: secretary@earllawfirm.com</li>
+          <li>Data Protection Officer (DPO): Ashly Van Earl</li>
+        </ul>
+        <h3>What Personal Data We Collect</h3>
+        <p>We collect the following types of personal data:</p>
+        <ul>
+          <li>Contact Information: Includes names, email addresses, phone numbers, and mailing addresses.</li>
+          <li>Usage Data: Information about how you interact with our website, such as pages visited, time spent, and browser details.</li>
+          <li>Cookies and Analytics: We use cookies and similar technologies to analyze website traffic and improve user experience.</li>
+        </ul>
+        <h3>How We Use Your Personal Data</h3>
+        <p>We process your personal data for the following purposes:</p>
+        <ul>
+          <li>Communication: To respond to your inquiries and provide customer support.</li>
+          <li>Marketing: To send you relevant updates, newsletters, and promotional materials (if you’ve opted in).</li>
+          <li>Analytics: To understand user behavior and enhance our website’s performance.</li>
+        </ul>
+        <h3>Legal Basis for Processing</h3>
+        <p>We process your data based on the following legal grounds:</p>
+        <ul>
+          <li>Contractual Necessity: To fulfill our contractual obligations with you.</li>
+          <li>Legitimate Interests: To improve our services and enhance user experience.</li>
+          <li>Consent: For marketing communications (if applicable).</li>
+        </ul>
+        <h3>Data Retention</h3>
+        <p>We retain your personal data for as long as necessary to achieve the purposes outlined in this notice. When no longer needed, we securely delete or anonymize it.</p>
+        <h3>Your Rights</h3>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Access your personal data.</li>
+          <li>Correct any inaccuracies.</li>
+          <li>Request erasure (in certain cases).</li>
+          <li>Object to processing.</li>
+          <li>Data portability.</li>
+        </ul>
+      </div>
     </div>
   </nav>
 </template>
@@ -33,29 +77,40 @@ export default {
     PracticeAreas,
   },
   data() {
-    return {
-      showHomeComponent: true,
-      showContactComponent: false,
-      showPracticeAreaComponent: false,
-    };
+  return {
+    showHomeComponent: true,
+    showContactComponent: false,
+    showPracticeAreaComponent: false,
+    showPrivacyNoticeComponent: false,
+  };
+},
+methods: {
+  showHome() {
+    this.showHomeComponent = true;
+    this.showContactComponent = false;
+    this.showPracticeAreaComponent = false;
+    this.showPrivacyNoticeComponent = false;
   },
-  methods: {
-    showHome() {
-      this.showHomeComponent = true;
-      this.showContactComponent = false;
-      this.showPracticeAreaComponent = false;
-    },
-    showContact() {
-      this.showHomeComponent = false;
-      this.showContactComponent = true;
-      this.showPracticeAreaComponent = false;
-    },
-    showPracticeArea() {
-      this.showHomeComponent = false;
-      this.showContactComponent = false;
-      this.showPracticeAreaComponent = true;
-    },
+  showContact() {
+    this.showHomeComponent = false;
+    this.showContactComponent = true;
+    this.showPracticeAreaComponent = false;
+    this.showPrivacyNoticeComponent = false;
   },
+  showPracticeArea() {
+    this.showHomeComponent = false;
+    this.showContactComponent = false;
+    this.showPracticeAreaComponent = true;
+    this.showPrivacyNoticeComponent = false;
+  },
+  showPrivacyNotice() {
+    this.showHomeComponent = false;
+    this.showContactComponent = false;
+    this.showPracticeAreaComponent = false;
+    this.showPrivacyNoticeComponent = true;
+  }
+}
+
 };
 </script>
 <style scoped>
