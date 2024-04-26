@@ -169,8 +169,10 @@ methods: {
   transition: color 0.3s;
 }
 .privacy-notice {
-  font-size: 0.8em; /* Reduces the font size */
+  font-size: 0.8em; /* existing font size adjustment */
+  line-height: 1.2; /* Reduced line height for closer line spacing */
 }
+
 
 .privacy-notice ul {
   list-style: none; /* Removes bullet points */
