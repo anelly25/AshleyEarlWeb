@@ -174,7 +174,7 @@ methods: {
   line-height: 1.2; /* Reduced line height for closer line spacing */
 }
 
-.privacy-notice p, .privacy-notice h2, .privacy-notice h3, .privacy-notice ul, .privacy-notice li {
+.privacy-notice p, .privacy-notice h3, .privacy-notice ul, .privacy-notice li {
   margin: 0;   /* Removes vertical margins */
   padding: 0;  /* Removes padding */
 }
