@@ -49,7 +49,7 @@
         </div>
     </div>
 <div class="credentials">
-    <h2 class="sub-heading">Ashly Van arl</h2>
+    <h2 class="sub-heading">Ashly Van Earl</h2>
     <img :src="ashlyImage" alt="Ashly Van Earl's Photo" class="ashly-image">
     <h2 class="sub-heading">Credentials</h2>
     <p class="large-text">{{ ashly.desc }}</p>
