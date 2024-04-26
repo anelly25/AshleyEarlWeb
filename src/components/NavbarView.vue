@@ -18,7 +18,7 @@
       <HomeView v-if="showHomeComponent" @showPracticeAreas = "showPracticeArea"/>
       <ContactForm v-if="showContactComponent" @emailSent="showHome" />
       <PracticeAreas v-if="showPracticeAreaComponent"  />
-      <div v-if="showPrivacyNoticeComponent">
+      <div v-if="showPrivacyNoticeComponent" class="privacy-notice">
         <h2>Privacy Notice</h2>
         <p>Welcome to Earl Law Firm! We are committed to protecting your privacy and ensuring that your personal data is handled responsibly. This privacy notice explains how we collect, use, and protect your information. Please read it carefully.</p>
         <h3>Data Controller</h3>
@@ -167,6 +167,14 @@ methods: {
   color: #333;
   font-size: 1em;
   transition: color 0.3s;
+}
+.privacy-notice {
+  font-size: 0.8em; /* Reduces the font size */
+}
+
+.privacy-notice ul {
+  list-style: none; /* Removes bullet points */
+  padding-left: 0; /* Removes indentation of list */
 }
 
 .tab-link::after { /* This will be the line under the tab */
