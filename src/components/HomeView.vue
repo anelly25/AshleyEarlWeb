@@ -178,7 +178,7 @@ export default {
 <style scoped>
 
 .info {
-    background-color:#011324;
+    background-color:#001020;
     color: #fff;
     padding: 5vw;
     margin-bottom: 5vw;
@@ -270,7 +270,7 @@ p {
 /* Responsive design */
 
     .spanish-section {
-        background-color:  #001f3f;
+        background-color:  #001020;
         font-family: 'Fiesta', cursive;
     }
 
@@ -284,7 +284,7 @@ p {
         font-family: 'Arial', sans-serif;
     }
     .attorneys-container {
-    background-color: #011324; /* Dark navy color */
+    background-color: #001020; /* Dark navy color */
     color: #fff; /* White color for the text */
     padding: 1.25em; /* 20px assuming base font size is 16px */
     font-size: 1em;
