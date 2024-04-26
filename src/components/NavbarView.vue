@@ -18,6 +18,7 @@
       <HomeView v-if="showHomeComponent" @showPracticeAreas = "showPracticeArea"/>
       <ContactForm v-if="showContactComponent" @emailSent="showHome" />
       <PracticeAreas v-if="showPracticeAreaComponent"  />
+      
       <div v-if="showPrivacyNoticeComponent" class="privacy-notice">
     <h2>Privacy Notice</h2>
     <p>Welcome to Earl Law Firm! We are committed to protecting your privacy and ensuring that your personal data is handled responsibly. This privacy notice explains how we collect, use, and protect your information. Please read it carefully.</p>
@@ -174,7 +175,7 @@ methods: {
   line-height: 1.2; /* Reduced line height for closer line spacing */
 }
 
-.privacy-notice p, .privacy-notice h3, .privacy-notice ul, .privacy-notice li {
+.privacy-notice p, .privacy-notice h2, .privacy-notice h3, .privacy-notice ul, .privacy-notice li {
   margin: 0;   /* Removes vertical margins */
   padding: 0;  /* Removes padding */
 }
