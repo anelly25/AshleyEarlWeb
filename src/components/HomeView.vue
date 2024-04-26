@@ -339,12 +339,12 @@ p {
 
 .top-image {
     background-image: url('../assets/FullLogo.jpg');
-    background-size: contain; /* This is relative to its container */
+    background-size: cover; /* Changed from contain to cover to fill the container */
     background-repeat: no-repeat;
-    background-position: center; /* This is relative to its container */
-    opacity: 0.8; /* This is already a relative unit */
-    z-index: 2; /* z-index doesn't have a relative unit equivalent, it's unitless */
+    background-position: center;
+    z-index: 2;
 }
+
 
 .bottom-image {
     background-image: url('https://www.travellens.co/content/images/2022/04/Baton-Rouge.jpg');
