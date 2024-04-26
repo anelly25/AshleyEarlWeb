@@ -6,7 +6,7 @@
       <div class="tab-container">
   <button class="tab-link" :class="{'active-tab': showHomeComponent}" @click="showHome">Home</button>
   <button class="tab-link" :class="{'active-tab': showContactComponent}" @click="showContact">Contact</button>
-  <button class="tab-link" :class="{'active-tab': showPracticeAreaComponent}" @click="showPracticeArea">Practice Area</button>
+  <button class="tab-link" :class="{'active-tab': showPracticeAreaComponent}" @click="showPracticeArea">Practice Areas</button>
   <button class="tab-link" :class="{'active-tab': showPrivacyNoticeComponent}" @click="showPrivacyNotice">Privacy Notice</button>
 </div>
 
